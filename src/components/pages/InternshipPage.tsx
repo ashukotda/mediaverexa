@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Users, Search, FileText, Code, Share2, Palette, CheckCircle, Clock, Award, Lightbulb, Target } from 'lucide-react';
+import { Users, Search, FileText, Code, Share2, Palette, CheckCircle, Clock, Award, Lightbulb, Target, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
