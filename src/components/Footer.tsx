@@ -107,17 +107,16 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+918398070021"
                   className="font-paragraph text-sm text-background/80 hover:text-primary transition-colors"
                 >
-                  +1 (234) 567-890
+                  +91 8398070021
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="font-paragraph text-sm text-background/80">
-                  123 Business Street, Suite 100<br />
-                  New York, NY 10001
+                  Bilaspur, Yamunanagar 135102
                 </span>
               </li>
             </ul>
