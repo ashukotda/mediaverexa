@@ -263,7 +263,7 @@ export default function ContactPage() {
               </form>
             </motion.div>
 
-            {/* Map and Additional Info */}
+            {/* Why Choose Us */}
             <motion.div
               variants={fadeInUp}
               initial="initial"
@@ -273,45 +273,48 @@ export default function ContactPage() {
             >
               <div>
                 <h2 className="font-heading text-3xl md:text-4xl text-foreground mb-6">
-                  Visit Our Office
+                  Why Choose Verexa Media?
                 </h2>
                 <p className="font-paragraph text-lg text-foreground/70 mb-8">
-                  We're located in Bilaspur, Yamunanagar. Feel free to reach out to discuss your project.
+                  We deliver results-driven digital marketing solutions tailored to your business needs.
                 </p>
               </div>
 
-              {/* Map Placeholder */}
-              <div className="bg-background rounded-lg overflow-hidden h-96">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27634.84!2d77.29!3d30.13!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f7f5e5e5e5e5e%3A0x5e5e5e5e5e5e5e5e!2sBilaspur%2C%20Yamunanagar%2C%20Haryana%20135102!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Verexa Media Office Location"
-                />
-              </div>
+              <div className="space-y-6">
+                <div className="bg-background p-6 rounded-lg">
+                  <h3 className="font-heading text-xl text-foreground mb-3">
+                    Expert Team
+                  </h3>
+                  <p className="font-paragraph text-base text-foreground/70">
+                    Our experienced professionals bring creativity and strategic thinking to every project.
+                  </p>
+                </div>
 
-              {/* Business Hours */}
-              <div className="bg-background p-8 rounded-lg">
-                <h3 className="font-heading text-xl text-foreground mb-4">
-                  Business Hours
-                </h3>
-                <div className="space-y-2 font-paragraph text-base text-foreground/70">
-                  <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span>9:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span>10:00 AM - 4:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sunday</span>
-                    <span>Closed</span>
-                  </div>
+                <div className="bg-background p-6 rounded-lg">
+                  <h3 className="font-heading text-xl text-foreground mb-3">
+                    Proven Results
+                  </h3>
+                  <p className="font-paragraph text-base text-foreground/70">
+                    We focus on measurable outcomes that drive growth and ROI for your business.
+                  </p>
+                </div>
+
+                <div className="bg-background p-6 rounded-lg">
+                  <h3 className="font-heading text-xl text-foreground mb-3">
+                    Personalized Approach
+                  </h3>
+                  <p className="font-paragraph text-base text-foreground/70">
+                    Every strategy is customized to align with your unique goals and target audience.
+                  </p>
+                </div>
+
+                <div className="bg-background p-6 rounded-lg">
+                  <h3 className="font-heading text-xl text-foreground mb-3">
+                    24/7 Support
+                  </h3>
+                  <p className="font-paragraph text-base text-foreground/70">
+                    We're always here to answer your questions and support your digital journey.
+                  </p>
                 </div>
               </div>
             </motion.div>
