@@ -196,7 +196,7 @@ export default function TermsConditionsPage() {
                   If you have any questions about these Terms and Conditions, please contact us:
                 </p>
                 <ul className="space-y-2">
-                  <li><strong>Email:</strong> contact@verexamedia.com</li>
+                  <li><strong>Email:</strong> verexamedia@gmail.com</li>
                   <li><strong>Phone:</strong> +1 (234) 567-890</li>
                   <li><strong>Address:</strong> 123 Business Street, Suite 100, New York, NY 10001</li>
                 </ul>

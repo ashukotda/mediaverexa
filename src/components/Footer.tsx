@@ -98,10 +98,10 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                 <a
-                  href="mailto:contact@verexamedia.com"
+                  href="mailto:verexamedia@gmail.com"
                   className="font-paragraph text-sm text-background/80 hover:text-primary transition-colors"
                 >
-                  contact@verexamedia.com
+                  verexamedia@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">

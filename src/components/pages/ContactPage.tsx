@@ -31,8 +31,8 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: 'Email',
-      content: 'mediaverexa@gmail.com',
-      link: 'mailto:mediaverexa@gmail.com'
+      content: 'verexamedia@gmail.com',
+      link: 'mailto:verexamedia@gmail.com'
     },
     {
       icon: Phone,
