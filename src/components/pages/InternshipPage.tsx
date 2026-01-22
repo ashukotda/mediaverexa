@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Users, Search, TrendingUp, Share2, FileText, CheckCircle, Clock, Award } from 'lucide-react';
+import { Users, Search, FileText, Code, Share2, Palette, CheckCircle, Clock, Award, Lightbulb, Target } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -40,88 +40,159 @@ export default function InternshipPage() {
   const roles = [
     {
       icon: Users,
-      title: 'Human Resources Intern',
+      title: 'HR Intern',
       code: 'HR',
+      overview: 'Join our HR team to support recruitment, onboarding, and employee engagement initiatives while building foundational human resources skills.',
       responsibilities: [
-        'Assist in recruitment and onboarding processes',
-        'Manage intern coordination and communication',
-        'Support employee engagement initiatives',
-        'Maintain HR documentation and records'
+        'Assist in recruitment and candidate screening',
+        'Support onboarding and orientation processes',
+        'Coordinate intern programs and communications',
+        'Maintain HR records and documentation'
       ],
       skills: [
-        'Strong communication skills',
-        'Organizational abilities',
-        'Basic HR knowledge',
-        'Proficiency in MS Office'
-      ]
+        'Strong interpersonal and communication skills',
+        'Organizational and time management abilities',
+        'Basic understanding of HR practices',
+        'Proficiency in MS Office and Google Workspace'
+      ],
+      learning: [
+        'Recruitment and talent acquisition strategies',
+        'Employee engagement and retention techniques',
+        'HR compliance and best practices',
+        'Professional communication and coordination'
+      ],
+      duration: '3-6 months',
+      perks: ['Certificate of completion', 'Mentorship from HR professionals', 'Flexible remote work', 'Real-world HR experience']
     },
     {
       icon: Search,
-      title: 'Research Analyst Intern',
+      title: 'Research Analyst Intern (RA)',
       code: 'RA',
+      overview: 'Dive deep into market research and data analysis to uncover insights that drive strategic decisions and content creation.',
       responsibilities: [
-        'Conduct market and industry research',
-        'Analyze data and identify trends',
-        'Prepare research reports and presentations',
-        'Support content creation with data insights'
+        'Conduct comprehensive market and industry research',
+        'Analyze data trends and compile findings',
+        'Prepare detailed research reports and presentations',
+        'Support content teams with data-driven insights'
       ],
       skills: [
-        'Analytical thinking',
-        'Research methodology',
-        'Data analysis tools',
-        'Report writing'
-      ]
-    },
-    {
-      icon: TrendingUp,
-      title: 'Research Partner Intern',
-      code: 'RP',
-      responsibilities: [
-        'Collaborate on research projects',
-        'Develop research frameworks',
-        'Present findings to clients',
-        'Support strategic recommendations'
+        'Strong analytical and critical thinking',
+        'Research methodology and data collection',
+        'Proficiency in Excel, Google Sheets, or data tools',
+        'Excellent report writing and presentation skills'
       ],
-      skills: [
-        'Strategic thinking',
-        'Project management',
-        'Client communication',
-        'Advanced research skills'
-      ]
-    },
-    {
-      icon: Share2,
-      title: 'Social Media Marketing Intern',
-      code: 'SMM',
-      responsibilities: [
-        'Create and schedule social media content',
-        'Monitor and engage with online communities',
-        'Analyze social media metrics',
-        'Support paid advertising campaigns'
+      learning: [
+        'Advanced research methodologies',
+        'Data analysis and interpretation techniques',
+        'Market intelligence and competitive analysis',
+        'Professional report writing and visualization'
       ],
-      skills: [
-        'Social media platforms expertise',
-        'Content creation',
-        'Analytics tools',
-        'Creative thinking'
-      ]
+      duration: '3-6 months',
+      perks: ['Certificate of completion', 'Hands-on research projects', 'Mentorship from analysts', 'Portfolio-building opportunities']
     },
     {
       icon: FileText,
-      title: 'Content Writer Intern',
-      code: 'CW',
+      title: 'Research Writer Intern (RW)',
+      code: 'RW',
+      overview: 'Transform research findings into compelling written content that educates, informs, and engages diverse audiences.',
       responsibilities: [
-        'Write blog posts and articles',
-        'Create website and marketing copy',
-        'Conduct content research',
-        'Optimize content for SEO'
+        'Write research-based articles and reports',
+        'Translate complex data into accessible content',
+        'Collaborate with research analysts on projects',
+        'Edit and proofread research documentation'
       ],
       skills: [
-        'Excellent writing skills',
-        'SEO knowledge',
-        'Research abilities',
-        'Creativity and adaptability'
-      ]
+        'Exceptional writing and editing abilities',
+        'Research and information synthesis',
+        'Attention to detail and accuracy',
+        'Ability to write for different audiences'
+      ],
+      learning: [
+        'Research-based content writing techniques',
+        'Data storytelling and visualization',
+        'Academic and professional writing standards',
+        'Content strategy and audience engagement'
+      ],
+      duration: '3-6 months',
+      perks: ['Certificate of completion', 'Published work portfolio', 'Editorial mentorship', 'Byline opportunities']
+    },
+    {
+      icon: Code,
+      title: 'Web Developer Intern',
+      code: 'WD',
+      overview: 'Build and optimize modern web experiences using cutting-edge technologies while working on real client projects.',
+      responsibilities: [
+        'Develop and maintain website features',
+        'Implement responsive designs and UI components',
+        'Optimize website performance and user experience',
+        'Collaborate with designers and content teams'
+      ],
+      skills: [
+        'HTML, CSS, JavaScript fundamentals',
+        'Familiarity with React or modern frameworks',
+        'Basic understanding of responsive design',
+        'Problem-solving and debugging skills'
+      ],
+      learning: [
+        'Modern web development frameworks and tools',
+        'Best practices in UI/UX implementation',
+        'Website optimization and performance tuning',
+        'Collaborative development workflows'
+      ],
+      duration: '3-6 months',
+      perks: ['Certificate of completion', 'Real project portfolio', 'Technical mentorship', 'Industry-standard tools experience']
+    },
+    {
+      icon: Share2,
+      title: 'Social Media Content Creator Intern',
+      code: 'SMCC',
+      overview: 'Create engaging social media content that builds brand presence and connects with audiences across multiple platforms.',
+      responsibilities: [
+        'Create and schedule social media content',
+        'Design graphics and visual assets for posts',
+        'Monitor engagement and community interactions',
+        'Analyze social media metrics and performance'
+      ],
+      skills: [
+        'Social media platform expertise (Instagram, LinkedIn, etc.)',
+        'Content creation and copywriting',
+        'Basic graphic design skills',
+        'Understanding of social media trends'
+      ],
+      learning: [
+        'Social media strategy and content planning',
+        'Community management and engagement',
+        'Analytics and performance optimization',
+        'Brand voice and storytelling techniques'
+      ],
+      duration: '3-6 months',
+      perks: ['Certificate of completion', 'Social media portfolio', 'Creative mentorship', 'Campaign management experience']
+    },
+    {
+      icon: Palette,
+      title: 'Graphic Designer Intern',
+      code: 'GD',
+      overview: 'Bring creative visions to life through visual design, creating compelling graphics for digital marketing and brand materials.',
+      responsibilities: [
+        'Design graphics for social media and marketing',
+        'Create visual assets for websites and campaigns',
+        'Develop brand-consistent design materials',
+        'Collaborate with content and marketing teams'
+      ],
+      skills: [
+        'Proficiency in Adobe Creative Suite or Figma',
+        'Strong visual design and composition skills',
+        'Understanding of color theory and typography',
+        'Creativity and attention to detail'
+      ],
+      learning: [
+        'Professional design workflows and processes',
+        'Brand identity and visual consistency',
+        'Digital marketing design best practices',
+        'Client collaboration and feedback integration'
+      ],
+      duration: '3-6 months',
+      perks: ['Certificate of completion', 'Design portfolio pieces', 'Creative mentorship', 'Industry software experience']
     }
   ];
 
@@ -260,10 +331,10 @@ export default function InternshipPage() {
             className="text-center mb-16"
           >
             <h2 className="font-heading text-4xl md:text-5xl text-foreground mb-4">
-              Available Positions
+              Open Positions
             </h2>
             <p className="font-paragraph text-lg text-foreground/70 max-w-2xl mx-auto">
-              Explore our internship opportunities and find the perfect role for you
+              Explore our current internship opportunities and find the perfect role to launch your career
             </p>
           </motion.div>
 
@@ -272,61 +343,129 @@ export default function InternshipPage() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="space-y-8"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8"
           >
             {roles.map((role, index) => (
               <motion.div
                 key={index}
                 variants={fadeInUp}
-                className="bg-secondary p-8 rounded-lg"
+                className="bg-secondary p-8 rounded-lg hover:shadow-lg transition-shadow"
               >
-                <div className="flex items-start gap-6">
-                  <div className="bg-primary/10 p-4 rounded-lg">
+                {/* Header */}
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="bg-primary/10 p-3 rounded-lg">
                     <role.icon className="h-8 w-8 text-primary" />
                   </div>
                   <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-4">
+                    <div className="flex items-center gap-2 mb-2">
                       <h3 className="font-heading text-2xl text-foreground">
                         {role.title}
                       </h3>
-                      <span className="bg-primary text-primary-foreground px-3 py-1 rounded text-sm font-paragraph font-semibold">
+                      <span className="bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-paragraph font-semibold">
                         {role.code}
                       </span>
                     </div>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                      <div>
-                        <h4 className="font-heading text-lg text-foreground mb-3">
-                          Responsibilities
-                        </h4>
-                        <ul className="space-y-2">
-                          {role.responsibilities.map((resp, idx) => (
-                            <li key={idx} className="flex items-start gap-2">
-                              <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                              <span className="font-paragraph text-base text-foreground/70">
-                                {resp}
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="font-heading text-lg text-foreground mb-3">
-                          Required Skills
-                        </h4>
-                        <ul className="space-y-2">
-                          {role.skills.map((skill, idx) => (
-                            <li key={idx} className="flex items-start gap-2">
-                              <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                              <span className="font-paragraph text-base text-foreground/70">
-                                {skill}
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
+                    <p className="font-paragraph text-sm text-foreground/70">
+                      {role.overview}
+                    </p>
                   </div>
                 </div>
+
+                {/* Key Responsibilities */}
+                <div className="mb-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Target className="h-5 w-5 text-primary" />
+                    <h4 className="font-heading text-base text-foreground">
+                      Key Responsibilities
+                    </h4>
+                  </div>
+                  <ul className="space-y-2">
+                    {role.responsibilities.map((resp, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-1" />
+                        <span className="font-paragraph text-sm text-foreground/70">
+                          {resp}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Skills Required */}
+                <div className="mb-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Award className="h-5 w-5 text-primary" />
+                    <h4 className="font-heading text-base text-foreground">
+                      Skills Required
+                    </h4>
+                  </div>
+                  <ul className="space-y-2">
+                    {role.skills.map((skill, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-1" />
+                        <span className="font-paragraph text-sm text-foreground/70">
+                          {skill}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* What You'll Learn */}
+                <div className="mb-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Lightbulb className="h-5 w-5 text-primary" />
+                    <h4 className="font-heading text-base text-foreground">
+                      What You'll Learn
+                    </h4>
+                  </div>
+                  <ul className="space-y-2">
+                    {role.learning.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-1" />
+                        <span className="font-paragraph text-sm text-foreground/70">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Duration & Perks */}
+                <div className="mb-6 p-4 bg-background rounded-lg">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Clock className="h-4 w-4 text-primary" />
+                    <span className="font-paragraph text-sm text-foreground">
+                      <strong>Duration:</strong> {role.duration}
+                    </span>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    {role.perks.map((perk, idx) => (
+                      <span key={idx} className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-paragraph">
+                        {perk}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Apply Button */}
+                <Button 
+                  onClick={() => {
+                    const formSection = document.getElementById('application-form');
+                    if (formSection) {
+                      formSection.scrollIntoView({ behavior: 'smooth' });
+                      // Pre-select the role in the form
+                      const roleSelect = document.getElementById('role') as HTMLSelectElement;
+                      if (roleSelect) {
+                        roleSelect.value = role.code;
+                        setFormData(prev => ({ ...prev, role: role.code }));
+                      }
+                    }
+                  }}
+                  className="w-full font-paragraph"
+                >
+                  Apply for {role.title}
+                </Button>
               </motion.div>
             ))}
           </motion.div>
@@ -334,7 +473,7 @@ export default function InternshipPage() {
       </section>
 
       {/* Application Form */}
-      <section className="w-full py-20 bg-secondary">
+      <section id="application-form" className="w-full py-20 bg-secondary">
         <div className="max-w-[100rem] mx-auto px-8">
           <motion.div
             initial={{ opacity: 0 }}
@@ -348,7 +487,7 @@ export default function InternshipPage() {
                 Apply Now
               </h2>
               <p className="font-paragraph text-lg text-foreground/70">
-                Fill out the form below to submit your application
+                Take the first step towards your career at Verexa Media
               </p>
             </div>
 
