@@ -1,11 +1,6 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Users, Search, FileText, Code, Share2, Palette, CheckCircle, Clock, Award, Lightbulb, Target, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { useToast } from '@/hooks/use-toast';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -24,18 +19,6 @@ const staggerContainer = {
 };
 
 export default function InternshipPage() {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    role: '',
-    education: '',
-    experience: '',
-    motivation: '',
-    portfolio: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const roles = [
     {
@@ -219,34 +202,7 @@ export default function InternshipPage() {
     }
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: 'Application Submitted!',
-        description: 'Thank you for applying. We will review your application and get back to you soon.',
-      });
-      setFormData({
-        fullName: '',
-        email: '',
-        phone: '',
-        role: '',
-        education: '',
-        experience: '',
-        motivation: '',
-        portfolio: ''
-      });
-      setIsSubmitting(false);
-    }, 1000);
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -450,18 +406,7 @@ export default function InternshipPage() {
 
                 {/* Apply Button */}
                 <Button 
-                  onClick={() => {
-                    const formSection = document.getElementById('application-form');
-                    if (formSection) {
-                      formSection.scrollIntoView({ behavior: 'smooth' });
-                      // Pre-select the role in the form
-                      const roleSelect = document.getElementById('role') as HTMLSelectElement;
-                      if (roleSelect) {
-                        roleSelect.value = role.code;
-                        setFormData(prev => ({ ...prev, role: role.code }));
-                      }
-                    }
-                  }}
+                  onClick={() => window.open('https://forms.gle/4EcQfHWWhRA6KXn36', '_blank')}
                   className="w-full font-paragraph"
                 >
                   Apply for {role.title}
@@ -472,163 +417,29 @@ export default function InternshipPage() {
         </div>
       </section>
 
-      {/* Application Form */}
-      <section id="application-form" className="w-full py-20 bg-secondary">
+      {/* Apply Now Section */}
+      <section className="w-full py-20 bg-secondary">
         <div className="max-w-[100rem] mx-auto px-8">
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="max-w-3xl mx-auto"
+            className="max-w-2xl mx-auto text-center"
           >
-            <div className="text-center mb-12">
-              <h2 className="font-heading text-4xl md:text-5xl text-foreground mb-4">
-                Apply Now
-              </h2>
-              <p className="font-paragraph text-lg text-foreground/70">
-                Take the first step towards your career at Verexa Media
-              </p>
-            </div>
-
-            <form onSubmit={handleSubmit} className="bg-background p-8 md:p-12 rounded-lg space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="fullName" className="font-paragraph text-base text-foreground mb-2 block">
-                    Full Name *
-                  </Label>
-                  <Input
-                    id="fullName"
-                    name="fullName"
-                    value={formData.fullName}
-                    onChange={handleInputChange}
-                    required
-                    className="font-paragraph"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="email" className="font-paragraph text-base text-foreground mb-2 block">
-                    Email Address *
-                  </Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="font-paragraph"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="phone" className="font-paragraph text-base text-foreground mb-2 block">
-                    Phone Number *
-                  </Label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    required
-                    className="font-paragraph"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="role" className="font-paragraph text-base text-foreground mb-2 block">
-                    Desired Role *
-                  </Label>
-                  <select
-                    id="role"
-                    name="role"
-                    value={formData.role}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full h-10 px-3 rounded-lg border border-input bg-background font-paragraph text-base"
-                  >
-                    <option value="">Select a role</option>
-                    {roles.map((role) => (
-                      <option key={role.code} value={role.code}>
-                        {role.title}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <Label htmlFor="education" className="font-paragraph text-base text-foreground mb-2 block">
-                  Education Background *
-                </Label>
-                <Input
-                  id="education"
-                  name="education"
-                  value={formData.education}
-                  onChange={handleInputChange}
-                  placeholder="e.g., Bachelor's in Marketing, University Name"
-                  required
-                  className="font-paragraph"
-                />
-              </div>
-
-              <div>
-                <Label htmlFor="experience" className="font-paragraph text-base text-foreground mb-2 block">
-                  Relevant Experience
-                </Label>
-                <Textarea
-                  id="experience"
-                  name="experience"
-                  value={formData.experience}
-                  onChange={handleInputChange}
-                  placeholder="Describe any relevant experience, projects, or coursework"
-                  rows={4}
-                  className="font-paragraph"
-                />
-              </div>
-
-              <div>
-                <Label htmlFor="motivation" className="font-paragraph text-base text-foreground mb-2 block">
-                  Why do you want to intern at Verexa Media? *
-                </Label>
-                <Textarea
-                  id="motivation"
-                  name="motivation"
-                  value={formData.motivation}
-                  onChange={handleInputChange}
-                  placeholder="Tell us about your motivation and what you hope to learn"
-                  rows={4}
-                  required
-                  className="font-paragraph"
-                />
-              </div>
-
-              <div>
-                <Label htmlFor="portfolio" className="font-paragraph text-base text-foreground mb-2 block">
-                  Portfolio/LinkedIn URL
-                </Label>
-                <Input
-                  id="portfolio"
-                  name="portfolio"
-                  type="url"
-                  value={formData.portfolio}
-                  onChange={handleInputChange}
-                  placeholder="https://"
-                  className="font-paragraph"
-                />
-              </div>
-
-              <Button
-                type="submit"
-                size="lg"
-                disabled={isSubmitting}
-                className="w-full font-paragraph text-base py-6 rounded-lg"
-              >
-                {isSubmitting ? 'Submitting...' : 'Submit Application'}
-              </Button>
-            </form>
+            <h2 className="font-heading text-4xl md:text-5xl text-foreground mb-6">
+              Apply for an Internship
+            </h2>
+            <p className="font-paragraph text-lg text-foreground/70 mb-12">
+              To apply for an internship at Verexa Media, please fill out the Google Form below.
+            </p>
+            <Button
+              onClick={() => window.open('https://forms.gle/4EcQfHWWhRA6KXn36', '_blank')}
+              size="lg"
+              className="font-paragraph text-base py-6 px-12 shadow-md hover:shadow-lg transition-shadow"
+            >
+              Apply Now
+            </Button>
           </motion.div>
         </div>
       </section>
