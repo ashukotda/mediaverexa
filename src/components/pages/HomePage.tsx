@@ -152,13 +152,7 @@ export default function HomePage() {
                 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight text-foreground leading-[0.9]"
               >
                 <div className="overflow-hidden">
-                  <motion.span variants={revealText} className="block">Create.</motion.span>
-                </div>
-                <div className="overflow-hidden">
-                  <motion.span variants={revealText} className="block text-primary">Research.</motion.span>
-                </div>
-                <div className="overflow-hidden">
-                  <motion.span variants={revealText} className="block">Grow.</motion.span>
+                  <motion.span variants={revealText} className="block">A World Built on Opportunities</motion.span>
                 </div>
               </motion.h1>
             </div>
