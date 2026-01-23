@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Image } from '@/components/ui/image';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -28,8 +29,14 @@ export default function Header() {
       <div className="max-w-[100rem] mx-auto px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <span className="font-heading text-2xl font-bold text-foreground">
+          <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <Image
+              src="https://static.wixstatic.com/media/0eba7f_2f7683f8c0af4338b8e446ee5753b7be~mv2.png"
+              alt="Verexa Media Logo"
+              width={40}
+              className="h-10 w-auto"
+            />
+            <span className="font-heading text-2xl font-bold text-foreground hidden sm:inline">
               Verexa Media
             </span>
           </Link>

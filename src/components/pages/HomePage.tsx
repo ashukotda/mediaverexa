@@ -129,6 +129,21 @@ export default function HomePage() {
         {/* Hero Content */}
         <div className="relative z-20 w-full max-w-[120rem] mx-auto px-6 md:px-12 pt-20">
           <div className="max-w-5xl">
+            {/* Logo */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="mb-12"
+            >
+              <Image
+                src="https://static.wixstatic.com/media/0eba7f_2f7683f8c0af4338b8e446ee5753b7be~mv2.png"
+                alt="Verexa Media Logo"
+                width={80}
+                className="h-20 w-auto"
+              />
+            </motion.div>
+
             <div className="overflow-hidden mb-2">
               <motion.h1 
                 initial="initial"

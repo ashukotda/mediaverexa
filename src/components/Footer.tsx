@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
+import { Image } from '@/components/ui/image';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -40,6 +41,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div>
+            <div className="mb-6">
+              <Image
+                src="https://static.wixstatic.com/media/0eba7f_2f7683f8c0af4338b8e446ee5753b7be~mv2.png"
+                alt="Verexa Media Logo"
+                width={32}
+                className="h-8 w-auto"
+              />
+            </div>
             <h3 className="font-heading text-xl font-bold mb-6">Verexa Media</h3>
             <p className="font-paragraph text-sm text-background/80 mb-6">
               Where Research Meets Powerful Content. Transform your digital presence with data-driven strategies.
