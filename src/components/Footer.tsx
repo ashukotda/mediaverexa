@@ -32,7 +32,7 @@ export default function Footer() {
     { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
     { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
-    { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' }
+    { icon: Instagram, href: 'https://www.instagram.com/verexamedia', label: 'Instagram' }
   ];
 
   return (
