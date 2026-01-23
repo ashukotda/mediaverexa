@@ -6,8 +6,6 @@ import HomePage from '@/components/pages/HomePage';
 import AboutPage from '@/components/pages/AboutPage';
 import ServicesPage from '@/components/pages/ServicesPage';
 import InternshipPage from '@/components/pages/InternshipPage';
-import BlogPage from '@/components/pages/BlogPage';
-import BlogPostPage from '@/components/pages/BlogPostPage';
 import ContactPage from '@/components/pages/ContactPage';
 import PrivacyPolicyPage from '@/components/pages/PrivacyPolicyPage';
 import TermsConditionsPage from '@/components/pages/TermsConditionsPage';
@@ -54,20 +52,6 @@ const router = createBrowserRouter([
         element: <InternshipPage />,
         routeMetadata: {
           pageIdentifier: 'internship',
-        },
-      },
-      {
-        path: "blog",
-        element: <BlogPage />,
-        routeMetadata: {
-          pageIdentifier: 'blog',
-        },
-      },
-      {
-        path: "blog/:id",
-        element: <BlogPostPage />,
-        routeMetadata: {
-          pageIdentifier: 'blog-post',
         },
       },
       {
