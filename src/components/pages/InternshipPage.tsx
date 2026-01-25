@@ -75,7 +75,7 @@ export default function InternshipPage() {
     },
     {
       icon: FileText,
-      title: 'Research Writer Intern (RW)',
+      title: 'Research and Promotion Intern (RW)',
       code: 'RW',
       overview: 'Transform research findings into compelling written content that educates, informs, and engages diverse audiences.',
       responsibilities: [
