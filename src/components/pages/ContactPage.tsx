@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -45,6 +45,12 @@ export default function ContactPage() {
       title: 'Address',
       content: 'Bilaspur Yamunanagar 135102',
       link: 'https://maps.google.com/?q=Bilaspur+Yamunanagar+135102'
+    },
+    {
+      icon: Instagram,
+      title: 'Instagram',
+      content: '@verexamedia',
+      link: 'https://www.instagram.com/verexamedia'
     }
   ];
 
